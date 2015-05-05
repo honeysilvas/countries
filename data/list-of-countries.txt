@@ -1,16 +1,3 @@
-# Countries 
-SQL dump of countries of the world with country codes, ISO Codes and phone codes.
-
-
-# Formats
-
- - SQL
- - CSV
- - Text file
-
- 
-# List of countries
-
 Afghanistan
 Albania
 Algeria
@@ -250,23 +237,3 @@ Western Sahara
 Yemen
 Zambia
 Zimbabwe
-
-
-## License
-
-This is released under the GPL license so feel free to use.
-
-
-## Contributions
-
-Contributions are most welcome!
-
-
-## Help and Support
-
-For questions, corrections, comments or suggestions, please contact me at:
-
- - honeysilvas@gmail.com.
- - http://www.silverhoneymedia.com
- - @honeysilvas
-
