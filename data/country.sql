@@ -11,7 +11,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2015 at 05:17 PM
+-- Generation Time: May 08, 2015 at 01:47 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -25,29 +25,29 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Table structure for table `countries`
+-- Table structure for table `country`
 --
 
-CREATE TABLE IF NOT EXISTS `countries` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(80) NOT NULL,
-  `nice_name` varchar(80) NOT NULL,
-  `iso` char(2) NOT NULL,
-  `iso3` char(3) DEFAULT NULL,
-  `number_code` smallint(6) DEFAULT NULL,
-  `phone_code` int(5) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `country_id` (`id`)
+CREATE TABLE IF NOT EXISTS `country` (
+  `country_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `country_name` varchar(80) NOT NULL,
+  `country_nice_name` varchar(80) NOT NULL,
+  `country_iso` char(2) NOT NULL,
+  `country_iso3` char(3) DEFAULT NULL,
+  `country_number_code` smallint(6) DEFAULT NULL,
+  `country_phone_code` int(5) NOT NULL,
+  `country_date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `country_date_updated` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `country_deleted_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`country_id`),
+  UNIQUE KEY `country_id` (`country_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=240 ;
 
 --
--- Dumping data for table `countries`
+-- Dumping data for table `country`
 --
 
-INSERT INTO `countries` (`id`, `name`, `nice_name`, `iso`, `iso3`, `number_code`, `phone_code`, `created_at`, `updated_at`, `deleted_at`) VALUES
+INSERT INTO `country` (`country_id`, `country_name`, `country_nice_name`, `country_iso`, `country_iso3`, `country_number_code`, `country_phone_code`, `country_date_created`, `country_date_updated`, `country_deleted_at`) VALUES
 (1, 'Afghanistan', 'Afghanistan', 'AF', 'AFG', 4, 93, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'Albania', 'Albania', 'AL', 'ALB', 8, 355, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (3, 'Algeria', 'Algeria', 'DZ', 'DZA', 12, 213, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
